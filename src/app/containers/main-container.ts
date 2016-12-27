@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app',
+    selector: 'main-container',
     template: `
     <div>
-    <navbar></navbar>
-    <router-outlet></router-outlet>
+        
     </div>
 `
 })
 
-export class App { }
+export class MainContainer { }
