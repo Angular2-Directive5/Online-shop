@@ -30,7 +30,8 @@ var config = {
     ],
 
     resolve: {
-        extensions: ['', '.ts', '.js', '.json']
+        modulesDirectories: ['node_modules'],
+        extensions: ['src', 'src/js', '', '.ts', '.js', '.json']
     },
 
     devServer: {
@@ -47,7 +48,10 @@ var config = {
         clearImmediate: false,
         setImmediate: false,
         clearTimeout: true,
-        setTimeout: true
+        setTimeout: true,
+        fs: 'empty',
+
+
     }
 };
 module.exports = config;
