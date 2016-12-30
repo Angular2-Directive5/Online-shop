@@ -17,8 +17,9 @@ var el = new Everlive({
 @Component({
     selector: 'all-users',
     template: `
-    <h1 *ngFor="let user of users.result">{{user.Username}}</h1>
-
+    <div class="collection">
+         <a class="collection-item" *ngFor="let user of users.result" [routerLink]="['/users', user.Id]">{{ user.Username }}</a>
+    </div>
 `
 })
 
@@ -26,24 +27,18 @@ var el = new Everlive({
 export class AllUsers implements OnInit {
     constructor(private usersService: UserService) { }
     users = {}
-   
 
-    getAllUsers() {
-        return this.usersService.getAll()
-
-        
-    }
 
     ngOnInit(): void {
-       
-        this.getAllUsers()
+
+        this.usersService.getAll()
             .then(data => this.users = data)
-            .then((data => console.log(data))) 
-               
-             
-             
+            .then((data => console.log(data)))
+
+
+
     }
 
-   
+
 
 }

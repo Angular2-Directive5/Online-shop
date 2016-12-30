@@ -11,9 +11,12 @@ import { Login } from './app/containers/login-form'
 import { Register } from './app/containers/register-form'
 import { UserService } from './app/services/user.service'
 import { AllUsers } from './app/containers/all-users'
+import { UserDetails } from './app/containers/user-details'
+import { Footer } from './app/containers/footer'
+
 
 @NgModule({
-    declarations: [App, Navbar, MainContainer, About, Login, Register, AllUsers],
+    declarations: [App, Navbar, MainContainer, About, Login, Register, AllUsers, UserDetails, Footer],
     imports: [BrowserModule, routes, FormsModule],
     providers: [UserService],
     bootstrap: [App]

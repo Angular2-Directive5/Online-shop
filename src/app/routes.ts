@@ -5,6 +5,7 @@ import { About } from './containers/about'
 import { Login } from './containers/login-form'
 import { Register } from './containers/register-form'
 import { AllUsers } from './containers/all-users'
+import { UserDetails } from './containers/user-details';
 
 
 export const routes: ModuleWithProviders = RouterModule.forRoot([
@@ -27,8 +28,13 @@ export const routes: ModuleWithProviders = RouterModule.forRoot([
     },
     {
         path: 'users',
-        component: AllUsers 
+        component: AllUsers
     },
+    {
+        path: 'users/:id',
+        component: UserDetails
+    },
+
     {
         path: '**',
         redirectTo: ''

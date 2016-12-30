@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 
 var Everlive = require('everlive-sdk')
@@ -22,8 +23,13 @@ export class UserService {
 
     }
 
-    getById(id: number) {
+    getById(id: any) {
+        var filter = new Everlive.Query();
+        filter.where().eq('Id', id).done();
 
+        var data = el.data('Users');
+        return data.get(filter)
+           
     }
 
     create(name, pass, attrs) {
