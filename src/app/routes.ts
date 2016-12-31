@@ -6,12 +6,13 @@ import { Login } from './containers/login-form'
 import { Register } from './containers/register-form'
 import { AllUsers } from './containers/all-users'
 import { UserDetails } from './containers/user-details';
+import { Home } from './containers/home'
 
 
 export const routes: ModuleWithProviders = RouterModule.forRoot([
     {
         path: '',
-        component: MainContainer
+        component: Home
     },
     {
         path: 'about',
@@ -33,6 +34,10 @@ export const routes: ModuleWithProviders = RouterModule.forRoot([
     {
         path: 'users/:id',
         component: UserDetails
+    },
+    {
+        path: 'home',
+        component: Home
     },
 
     {

@@ -15,9 +15,9 @@ var el = new Everlive({
   template: `
   <nav class="grey darken-1">
     <div class="nav-wrapper">
-      <a [routerLink]="['']" href="#" class="brand-logo">Logo</a>
+      <a [routerLink]="['home']" href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a [routerLink]="['']" href="#">Home</a></li>
+        <li><a [routerLink]="['home']" href="#">Home</a></li>
         <li><a href="#">Categories</a></li>
         <li><a  [routerLink]="['users']" href="#">Users</a></li>
         <li><a [routerLink]="['about']" href="#">About</a></li>

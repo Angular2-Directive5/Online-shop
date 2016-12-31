@@ -20,27 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="https://bs-static.cdn.telerik.com/1.9.1/everlive.all.min.js"></script>
     <script>
-        Materialize.updateTextFields();
-
-
-
-        var apiKey = '656rc4p2f15c5tlj';
-        var el = new Everlive(apiKey);
-
-        var advertData = el.data('Advert');
-
-        var advert = {
-            Title: 'Test',
-            Category: 'Mobile'
-        }
-
-        advertData.create(advert)
-            .then(function() {
-                advertData.get(null)
-                    .then(function(adverts) {
-                        console.log(adverts);
-                    });
-            });
+        Materialize.updateTextFields;
     </script>
     <div id="wrapper">
         <app>

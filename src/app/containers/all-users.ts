@@ -2,17 +2,6 @@ import { Component } from '@angular/core';
 import { UserService } from '../services/user.service'
 import { OnInit } from '@angular/core';
 
-var Everlive = require('everlive-sdk')
-var apiKey = '656rc4p2f15c5tlj';
-var el = new Everlive({
-    appId: apiKey,
-    scheme: 'https',
-    authentication: {
-        persist: true
-    }
-});
-
-
 
 @Component({
     selector: 'all-users',
