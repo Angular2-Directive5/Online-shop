@@ -15,19 +15,21 @@ import { UserDetails } from './app/containers/user-details'
 import { Footer } from './app/containers/footer'
 import { AdvertsService } from './app/services/adverts.service'
 import { Home } from './app/containers/home'
+import { AdvertDetails } from './app/containers/adverts-details'
 
 
 @NgModule({
-    declarations: [App, 
-    Navbar, 
-    MainContainer, 
-    About, 
-    Login, 
-    Register, 
-    AllUsers, 
-    UserDetails, 
-    Footer,
-    Home],
+    declarations: [App,
+        Navbar,
+        MainContainer,
+        About,
+        Login,
+        Register,
+        AllUsers,
+        UserDetails,
+        Footer,
+        Home,
+        AdvertDetails],
     imports: [BrowserModule, routes, FormsModule],
     providers: [UserService, AdvertsService],
     bootstrap: [App]

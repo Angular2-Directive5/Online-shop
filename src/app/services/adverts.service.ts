@@ -27,7 +27,7 @@ export class AdvertsService {
         var filter = new Everlive.Query();
         filter.where().eq('Id', id).done();
 
-        var data = el.data('Users');
+        var data = el.data('Advert');
         return data.get(filter)
            
     }
