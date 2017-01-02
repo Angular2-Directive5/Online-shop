@@ -16,8 +16,7 @@ export class MarkAsFavourite {
 
     constructor(private userService: UserService,
         private advertsService: AdvertsService,
-        private elementRef: ElementRef) {
-        this.bgColor = 'gray';
+        private elementRef: ElementRef) {        
     }
 
     @HostListener('click') onItemClick() {
