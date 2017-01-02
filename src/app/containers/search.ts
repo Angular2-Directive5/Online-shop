@@ -62,14 +62,11 @@ export class Search implements OnInit {
     }
 
     onWayChange(event: any) {
-        this.sortingWay = +event.target.value;
-        console.log(event.target.value);
-        
+        this.sortingWay = +event.target.value;        
     }
 
     onSortingChange(event: any) {
-        this.sortingProperty = event.target.value;
-        console.log(event.target.value);
+        this.sortingProperty = event.target.value;        
     }
 
 }
