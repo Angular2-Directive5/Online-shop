@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+
 import { UserService } from '../services/user.service'
+
 var Everlive = require('everlive-sdk')
 var apiKey = '656rc4p2f15c5tlj';
 var el = new Everlive(apiKey);
-
-
 
 @Component({
     selector: 'register',
