@@ -21,8 +21,9 @@
 <div class="row">
     <div class="collection col-md-4 col-md-push-4">
         <div class="collection-item" *ngFor="let advert of (adverts.result | advertsSortPipe: [sortingProperty, sortingWay] | advertFilterPipe:filterProperty )">
-            <span mark-as-favourite class="glyphicon glyphicon-star-empty"></span>
-            <a [routerLink]="['/advert', advert.Id]">{{ advert.Title }}</a>
+            <span mark-as-favourite title="Add to favourite" class="glyphicon glyphicon-star-empty"></span>
+            <a [routerLink]="['/advert', advert.Id]">{{ advert.Title }} </a>
+            <span mark-as-exclude class="glyphicon glyphicon-ban-circle pull-right" title="Exclude form search"></span>
         </div>
     </div>
 </div>

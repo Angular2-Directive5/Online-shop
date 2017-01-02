@@ -18,7 +18,7 @@ import { Login } from './app/containers/login-form'
 import { Register } from './app/containers/register-form'
 
 import { AdvertFilterPipe, AdvertSortPipe, CapitalizeFirstLetterPipe } from './app/pipes'
-import { MarkAsFavourite } from './app/directives'
+import { MarkAsFavourite, Exclude } from './app/directives'
 
 import { AllUsers } from './app/containers/all-users'
 import { UserDetails } from './app/containers/user-details'
@@ -47,7 +47,8 @@ import { Search } from './app/containers/search'
         AdvertSortPipe,
         CapitalizeFirstLetterPipe,
 
-        MarkAsFavourite
+        MarkAsFavourite,
+        Exclude
     ],
     imports: [BrowserModule, routes, FormsModule],
     providers: [UserService, AdvertsService],

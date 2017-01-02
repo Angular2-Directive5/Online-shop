@@ -12,14 +12,13 @@ const EMPTY = 'glyphicon-star-empty'
 
 export class MarkAsFavourite {
 
-    bgColor: string;
-
     constructor(private userService: UserService,
         private advertsService: AdvertsService,
         private elementRef: ElementRef) {        
     }
 
     @HostListener('click') onItemClick() {
+        // TODO Add save to array in user 
         if (this.elementRef.nativeElement.classList.contains(MARKED)) {            
             this.elementRef.nativeElement.classList.remove(MARKED);
             this.elementRef.nativeElement.classList.add(EMPTY);
