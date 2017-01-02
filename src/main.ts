@@ -16,6 +16,11 @@ import { Footer } from './app/containers/footer'
 import { AdvertsService } from './app/services/adverts.service'
 import { Home } from './app/containers/home'
 import { AdvertDetails } from './app/containers/adverts-details'
+import { MaterializeDirective } from 'angular2-materialize'
+
+
+
+
 
 
 @NgModule({
@@ -29,7 +34,9 @@ import { AdvertDetails } from './app/containers/adverts-details'
         UserDetails,
         Footer,
         Home,
-        AdvertDetails],
+        AdvertDetails,
+        MaterializeDirective,
+        ],
     imports: [BrowserModule, routes, FormsModule],
     providers: [UserService, AdvertsService],
     bootstrap: [App]
