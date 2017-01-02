@@ -20,6 +20,7 @@ import { AdvertDetails } from './app/containers/adverts-details'
 import { AdvertForm } from './app/containers/advert-form'
 import { Search } from './app/containers/search'
 import { AdvertFilterPipe, AdvertSortPipe } from './app/pipes'
+import { MarkAsFavourite } from './app/directives'
 
 
 @NgModule({
@@ -36,8 +37,11 @@ import { AdvertFilterPipe, AdvertSortPipe } from './app/pipes'
         AdvertDetails,
         AdvertForm,
         Search,
+
         AdvertFilterPipe,
-        AdvertSortPipe
+        AdvertSortPipe,
+
+        MarkAsFavourite
     ],
     imports: [BrowserModule, routes, FormsModule],
     providers: [UserService, AdvertsService],
