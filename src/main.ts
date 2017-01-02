@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
+import { FormsModule } from '@angular/forms';
+
 import { App } from './app/app'
 import { Navbar } from './app/ui/navbar'
 import { MainContainer } from './app/containers/main-container'
-import { FormsModule } from '@angular/forms';
 import { routes } from './app/routes'
 import { About } from './app/containers/about'
 import { Login } from './app/containers/login-form'
@@ -16,6 +17,7 @@ import { Footer } from './app/containers/footer'
 import { AdvertsService } from './app/services/adverts.service'
 import { Home } from './app/containers/home'
 import { AdvertDetails } from './app/containers/adverts-details'
+import { AdvertForm } from './app/containers/advert-form'
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { AdvertDetails } from './app/containers/adverts-details'
         UserDetails,
         Footer,
         Home,
-        AdvertDetails],
+        AdvertDetails,
+        AdvertForm
+    ],
     imports: [BrowserModule, routes, FormsModule],
     providers: [UserService, AdvertsService],
     bootstrap: [App]

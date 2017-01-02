@@ -1,5 +1,6 @@
 import { RouterModule } from '@angular/router'
 import { ModuleWithProviders } from '@angular/core'
+
 import { MainContainer } from './containers/main-container'
 import { About } from './containers/about'
 import { Login } from './containers/login-form'
@@ -8,7 +9,7 @@ import { AllUsers } from './containers/all-users'
 import { UserDetails } from './containers/user-details';
 import { Home } from './containers/home'
 import { AdvertDetails } from './containers/adverts-details'
-
+import { AdvertForm } from './containers/advert-form'
 
 export const routes: ModuleWithProviders = RouterModule.forRoot([
     {
@@ -39,6 +40,10 @@ export const routes: ModuleWithProviders = RouterModule.forRoot([
     {
         path: 'adverts/:id',
         component: AdvertDetails
+    },
+    {
+        path: 'advert-form',
+        component: AdvertForm
     },
     {
         path: 'home',
