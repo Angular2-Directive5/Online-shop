@@ -19,6 +19,7 @@ var el = new Everlive({
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a [routerLink]="['home']" href="#">Home</a></li>
         <li><a href="#">Categories</a></li>
+        <li><a  [routerLink]="['search']" href="#">Search</a></li>
         <li><a  [routerLink]="['users']" href="#">Users</a></li>
         <li><a [routerLink]="['about']" href="#">About</a></li>
         <li *ngIf="!isLoged"><a [routerLink]="['login']">Log in</a></li>

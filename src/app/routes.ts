@@ -10,6 +10,7 @@ import { UserDetails } from './containers/user-details';
 import { Home } from './containers/home'
 import { AdvertDetails } from './containers/adverts-details'
 import { AdvertForm } from './containers/advert-form'
+import { Search } from './containers/search'
 
 export const routes: ModuleWithProviders = RouterModule.forRoot([
     {
@@ -48,6 +49,10 @@ export const routes: ModuleWithProviders = RouterModule.forRoot([
     {
         path: 'home',
         component: Home
+    },
+    {
+        path: 'search',
+        component: Search
     },
 
     {

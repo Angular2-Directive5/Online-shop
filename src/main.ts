@@ -18,6 +18,8 @@ import { AdvertsService } from './app/services/adverts.service'
 import { Home } from './app/containers/home'
 import { AdvertDetails } from './app/containers/adverts-details'
 import { AdvertForm } from './app/containers/advert-form'
+import { Search } from './app/containers/search'
+import { AdvertFilterPipe, AdvertSortPipe } from './app/pipes'
 
 
 @NgModule({
@@ -32,7 +34,10 @@ import { AdvertForm } from './app/containers/advert-form'
         Footer,
         Home,
         AdvertDetails,
-        AdvertForm
+        AdvertForm,
+        Search,
+        AdvertFilterPipe,
+        AdvertSortPipe
     ],
     imports: [BrowserModule, routes, FormsModule],
     providers: [UserService, AdvertsService],
