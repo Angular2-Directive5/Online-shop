@@ -1,3 +1,3 @@
 <div class="collection">
-    <a class="collection-item" *ngFor="let user of users.result" [routerLink]="['/users', user.Id]">{{ user.Username }}</a>
+    <a class="collection-item" *ngFor="let user of users.result" [routerLink]="['/users', user.Id]"><span class="glyphicon glyphicon-user"></span> {{ user.Username }}</a>
 </div>
