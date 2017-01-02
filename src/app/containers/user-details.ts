@@ -6,16 +6,12 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
     selector: 'user-details',
-    template: `
-    <h1 *ngFor="let user of user.result">{{ user.Username }}</h1>
-    <h1 *ngFor="let user of user.result">{{ user.CreatedAt | date }}</h1>
-    
-    `
+    templateUrl: './app/views/user-details.html'
 })
 
 export class UserDetails implements OnInit {
-    
-    
+
+
 
     constructor(private userService: UserService, private route: ActivatedRoute, private location: Location) {
 
@@ -25,7 +21,7 @@ export class UserDetails implements OnInit {
     user = {}
 
     ngOnInit() {
-       let id = this.route.snapshot.params['id'];
+        let id = this.route.snapshot.params['id'];
         console.log(id);
 
         this.userService.getById(id)

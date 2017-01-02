@@ -6,16 +6,12 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
     selector: 'advert-details',
-    template: `
-    <h1 *ngFor="let advert of adverts.result">{{ advert.Title }}</h1>
-    <h1 *ngFor="let advert of adverts.result">{{ advert.CreatedAt | date }}</h1>
-    
-    `
+    templateUrl: './app/views/adverts-details.html'
 })
 
 export class AdvertDetails implements OnInit {
-    
-    
+
+
 
     constructor(private advertService: AdvertsService, private route: ActivatedRoute, private location: Location) {
 
@@ -25,7 +21,7 @@ export class AdvertDetails implements OnInit {
     adverts = {}
 
     ngOnInit() {
-       let id = this.route.snapshot.params['id'];
+        let id = this.route.snapshot.params['id'];
         console.log(id);
 
         this.advertService.getById(id)
