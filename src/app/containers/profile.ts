@@ -10,13 +10,8 @@ import { AdvertsService } from '../services/adverts.service'
     template: `
         <h1 *ngFor="let user of user.result">{{ user.Username }}</h1>
         <h1 *ngFor="let user of user.result">{{ user.CreatedAt | date }}</h1>
-        <div class="row card">
-    <div class="card-stacked">
-        <div class="card-action">
-            <a [routerLink]="['/advert-form']">Create Advert</a>
-        </div>
-    </div>
-</div>
+        <h1 *ngFor="let user of user.result">{{ user.Id }}</h1>
+        <h1 *ngFor="let advert of adverts.result">{{ advert.CreatedAt | date }}</h1>
 
         
     `
@@ -41,8 +36,8 @@ export class Profile implements OnInit {
             .then((data) => this.id = data.result.Id)
             .then((data) => this.userService.getById(data)
                 .then((data) => this.user = data))
-
-
+                
+            
 
 
 

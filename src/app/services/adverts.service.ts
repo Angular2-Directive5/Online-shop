@@ -43,13 +43,8 @@ export class AdvertsService {
 
     create(title, advertDescription, category) {
         var data = el.data('Advert');
-        data.create({'Title': title, 'AdvertDescription' : advertDescription, 'Category':  category}).
-            then(function (data) {
-                alert(JSON.stringify(data));
-            },
-            function (error) {
-                alert(JSON.stringify(error));
-            })
+        data.create({'Title': title, 'AdvertDescription' : advertDescription, 'Category':  category})
+           
     }
 
     

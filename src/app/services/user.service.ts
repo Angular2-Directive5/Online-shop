@@ -33,25 +33,14 @@ export class UserService {
     }
 
     create(name, pass, attrs) {
-        el.Users.register(name, pass, attrs).
-            then(function (data) {
-                alert(JSON.stringify(data));
-            },
-            function (error) {
-                alert(JSON.stringify(error));
-            })
+        el.Users.register(name, pass, attrs)
+            
     }
 
     login(username, password) {
 
-        el.authentication.login(username, // username
-            password, // password
-            function (data) {
-                alert(JSON.stringify(data));
-            },
-            function (error) {
-                alert(JSON.stringify(error));
-            });
+        el.authentication.login(username, password);
+        
 
 
 
