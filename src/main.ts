@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { FormsModule } from '@angular/forms';
+import {enableProdMode} from '@angular/core';
+
+enableProdMode()
 
 import { App } from './app/app'
 

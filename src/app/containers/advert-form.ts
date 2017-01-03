@@ -7,8 +7,8 @@ var el = new Everlive(apiKey);
 
 @Component({
     selector: 'advert-form',
-    templateUrl: './app/views/advert-form.html' // It does not work for some reason
-    // template: '<div>HUI</div>'
+    //templateUrl: './app/views/advert-form.html' // It does not work for some reason
+    template: '<div></div>'
 })
 
 export class AdvertForm {
