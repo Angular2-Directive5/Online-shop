@@ -1,34 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
-import 'rxjs/add/operator/switchMap';
 
 import { UserService } from '../services/user.service'
 import { AdvertsService } from '../services/adverts.service'
 
 @Component({
-    selector: 'user-details',
-    templateUrl: './app/views/user-details.html'
+    selector: 'searchForm',
+    templateUrl: './app/views/search.html'
 })
 
-export class UserDetails implements OnInit {
+export class Search implements OnInit {
 
-    constructor(private userService: UserService,
-        private route: ActivatedRoute,
-        private advertsService: AdvertsService,
-        private location: Location) {
+    constructor(private userService: UserService, private advertsService: AdvertsService) {
+        this.filterProperty = '';
+        this.sortingWay = 1;
+        this.sortingProperty = 'Category';
     }
 
+    // TODO Add services
     user = {};
     adverts = {};
+    filterProperty: string;
+    sortingWay: number;
+    sortingProperty: string;
 
     ngOnInit() {
-        let id = this.route.snapshot.params['id'];
-
-        this.userService.getById(id)
-            .then((data) => this.user = data)
-            .then((data) => console.log(data));
-
         // TODO: Added service logic
         this.adverts = {
             'result': [
@@ -64,4 +59,5 @@ export class UserDetails implements OnInit {
 
         console.log(this.adverts);
     }
+
 }

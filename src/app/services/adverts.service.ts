@@ -32,8 +32,18 @@ export class AdvertsService {
            
     }
 
-    create(name, pass, attrs) {
-        el.Users.register(name, pass, attrs).
+    getByOwner(owner: any) {
+        var filter = new Everlive.Query();
+        filter.where().eq('Owner', owner).done();
+
+        var data = el.data('Advert');
+        return data.get(filter)
+           
+    }
+
+    create(title, advertDescription, category) {
+        var data = el.data('Advert');
+        data.create({'Title': title, 'AdvertDescription' : advertDescription, 'Category':  category}).
             then(function (data) {
                 alert(JSON.stringify(data));
             },

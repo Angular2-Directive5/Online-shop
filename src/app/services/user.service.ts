@@ -29,7 +29,7 @@ export class UserService {
 
         var data = el.data('Users');
         return data.get(filter)
-           
+
     }
 
     create(name, pass, attrs) {
@@ -56,6 +56,13 @@ export class UserService {
 
 
     }
+
+    getCurrentUser(): any {
+        var data = el.data('Users');
+        return el.Users.currentUser()
+
+    }
+
     logaout() {
         el.authentication.logout(function () {
             alert("Logout successful!");

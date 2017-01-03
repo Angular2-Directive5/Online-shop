@@ -5,11 +5,7 @@ import { OnInit } from '@angular/core';
 
 @Component({
     selector: 'all-users',
-    template: `
-    <div class="collection">
-         <a class="collection-item" *ngFor="let user of users.result" [routerLink]="['/users', user.Id]">{{ user.Username }}</a>
-    </div>
-`
+    templateUrl: './app/views/all-users.html'
 })
 
 

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
+import { FormsModule } from '@angular/forms';
+
 import { App } from './app/app'
 import { Navbar } from './app/ui/navbar'
 import { MainContainer } from './app/containers/main-container'
-import { FormsModule } from '@angular/forms';
 import { routes } from './app/routes'
 import { About } from './app/containers/about'
 import { Login } from './app/containers/login-form'
@@ -16,7 +17,10 @@ import { Footer } from './app/containers/footer'
 import { AdvertsService } from './app/services/adverts.service'
 import { Home } from './app/containers/home'
 import { AdvertDetails } from './app/containers/adverts-details'
-import { MaterializeDirective } from 'angular2-materialize'
+import { AdvertForm } from './app/containers/advert-form'
+import { Search } from './app/containers/search'
+import { AdvertFilterPipe, AdvertSortPipe } from './app/pipes'
+import { Profile } from './app/containers/profile'
 
 
 
@@ -35,8 +39,12 @@ import { MaterializeDirective } from 'angular2-materialize'
         Footer,
         Home,
         AdvertDetails,
-        MaterializeDirective,
-        ],
+        AdvertForm,
+        Search,
+        AdvertFilterPipe,
+        AdvertSortPipe,
+        Profile
+    ],
     imports: [BrowserModule, routes, FormsModule],
     providers: [UserService, AdvertsService],
     bootstrap: [App]

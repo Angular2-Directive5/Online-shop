@@ -1,0 +1,19 @@
+<h1 *ngFor="let user of user.result">{{ user.Username }}</h1>
+<h1 *ngFor="let user of user.result">{{ user.CreatedAt | date }}</h1>
+
+<div class="row">
+    <div *ngFor="let advert of adverts.result" class="col s12 m6 l4 ">
+        <h5 class="header">{{advert.Title}}</h5>
+        <div class="card">
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p>{{advert.AdvertDescription}}.</p>
+                    <p>Created at: {{advert.CreatedAt | date}}</p>
+                </div>
+                <div class="card-action">
+                    <a [routerLink]="['/adverts', advert.Id]">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
