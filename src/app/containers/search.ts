@@ -15,8 +15,7 @@ export class Search implements OnInit {
         this.sortingWay = 1;
         this.sortingProperty = 'Category';
     }
-
-    // TODO Add services
+    
     user = {};
     adverts = {};
     filterProperty: string;
@@ -24,49 +23,21 @@ export class Search implements OnInit {
     sortingProperty: string;
 
     ngOnInit() {
-        // TODO: Added service logic
-        this.adverts = {
-            'result': [
-                {
-                    'Id': 'asdsadasgasd0',
-                    'Title': 'TitleTitle',
-                    'Pictures': {
-                        'pic': 'test'
-                    },
-                    'AdvertDescription': 'AdvertDescriptionAdvertDescription dssadas dsd asd sf',
-                    'CreatedAt': Date(),
-                    'Category': 'a'
-                },
-                {
-                    'Id': 'asdasdas',
-                    'Title': 'Aasd',
-                    'Pictures': {
-                        'pic': 'test'
-                    },
-                    'AdvertDescription': 'asafsas dssadas dsd asd sf',
-                    'CreatedAt': Date(),
-                    'Category': 'b'
-                },
-                {
-                    'Id': 'asvavsvasv',
-                    'Title': 'Title   Title',
-                    'Pictures': {
-                        'pic': 'test'
-                    },
-                    'AdvertDescription': 'AAAAAAAAAAAA dssadas dsd asd sf',
-                    'CreatedAt': Date(),
-                    'Category': 'c'
-                }
-            ]
-        }
+        this.advertsService.getAll()
+            .then(data => this.adverts = data)
+            .then((data => console.log(data)));
+
+        this.userService.getAll()
+            .then(data => this.user = data)
+            .then((data => console.log(data)));
     }
 
     onWayChange(event: any) {
-        this.sortingWay = +event.target.value;        
+        this.sortingWay = +event.target.value;
     }
 
     onSortingChange(event: any) {
-        this.sortingProperty = event.target.value;        
+        this.sortingProperty = event.target.value;
     }
 
 }

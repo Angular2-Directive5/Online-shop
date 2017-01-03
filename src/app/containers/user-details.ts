@@ -29,39 +29,9 @@ export class UserDetails implements OnInit {
             .then((data) => this.user = data)
             .then((data) => console.log(data));
 
-        // TODO: Added service logic
-        this.adverts = {
-            'result': [
-                {
-                    'Id': 'asdsadasgasd0',
-                    'Title': 'TitleTitle',
-                    'Pictures': {
-                        'pic': 'test'
-                    },
-                    'AdvertDescription': 'AdvertDescriptionAdvertDescription dssadas dsd asd sf',
-                    'CreatedAt': Date()
-                },
-                {
-                    'Id': 'asdasdas',
-                    'Title': 'Aasd',
-                    'Pictures': {
-                        'pic': 'test'
-                    },
-                    'AdvertDescription': 'asafsas dssadas dsd asd sf',
-                    'CreatedAt': Date()
-                },
-                {
-                    'Id': 'asvavsvasv',
-                    'Title': 'Title   Title',
-                    'Pictures': {
-                        'pic': 'test'
-                    },
-                    'AdvertDescription': 'AAAAAAAAAAAA dssadas dsd asd sf',
-                    'CreatedAt': Date()
-                }
-            ]
-        }
+        this.advertsService.getAll()
+            .then(data => this.adverts = data)
+            .then((data => console.log(data)));
 
-        console.log(this.adverts);
     }
 }
