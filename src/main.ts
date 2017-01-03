@@ -47,13 +47,11 @@ import { Profile } from './app/containers/profile'
         AdvertDetails,
         AdvertForm,
         Search,
-
         AdvertFilterPipe,
         AdvertSortPipe,
         CapitalizeFirstLetterPipe,
-
         MarkAsFavourite,
-        Exclude
+        Exclude,
         AdvertSortPipe,
         Profile
     ],
