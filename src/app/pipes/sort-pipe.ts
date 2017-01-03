@@ -11,12 +11,12 @@ export class AdvertSortPipe implements PipeTransform {
                 switch (options[0]) {
                     case 'Category':
                         return options[1] > 0 ?
+                            a.Category.localeCompare(b.Category) :
+                            b.Category.localeCompare(a.Category);
+                    case 'Title':
+                        return options[1] > 0 ?
                             a.Title.localeCompare(b.Title) :
                             b.Title.localeCompare(a.Title);
-                    case 'Name':
-                        return options[1] > 0 ?
-                            +a.imdbRating - +b.imdbRating :
-                            +b.imdbRating - +a.imdbRating;
                 }
             });
         }

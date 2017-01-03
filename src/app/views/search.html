@@ -1,28 +1,30 @@
 <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterProperty" value="{{filterProperty}}" />
 
-<!--<div class="form-group col-md-4 col-md-offset-1">
-    <label for="filter">Order:</label>
-    <select class="form-control" id="filter" (change)="onWayChange($event)">
+<div class="row">
+    <div class="form-group col-md-4 col-md-offset-1">
+        <label for="filter">Order:</label>
+        <select class="form-control" id="filter" (change)="onWayChange($event)">
             <option [selected]="sortingWay === 'asc'" value="1">Ascending</option>
             <option [selected]="sortingWay === 'desc'" value="-1">Descending</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
         </select>
-</div>-->
+    </div>
 
-<!--<div class="form-group col-md-4 col-md-offset-1">
-    <label for="sort">Sort by:</label>
-    <select class="form-control" id="sort" (change)="onSortingChange($event)">
+    <div class="form-group col-md-4 col-md-offset-1">
+        <label for="sort">Sort by:</label>
+        <select class="form-control" id="sort" (change)="onSortingChange($event)">
             <option [selected]="sortingProperty === 'Category'" value="Category">Category</option>
-            <option [selected]="sortingProperty === 'Name'" value="Name">Name</option>
+            <option [selected]="sortingProperty === 'Title'" value="Title">Title</option>
         </select>
-</div>-->
+    </div>
+</div>
 
 <div class="row">
-    <div class="collection col-md-4 col-md-offset-1">
-        <a class="collection-item" 
-        *ngFor="let advert of (adverts.result | advertFilterPipe:filterProperty )" 
-        [routerLink]="['/advert', advert.Id]">{{ advert.Title }}</a>
+    <div class="collection col-md-4 col-md-push-4">
+        <div class="collection-item" *ngFor="let advert of (adverts.result | advertsSortPipe: [sortingProperty, sortingWay] | advertFilterPipe:filterProperty )">
+            <span mark-as-favourite title="Add to favourite" class="glyphicon glyphicon-star-empty"></span>
+            <a [routerLink]="['/advert', advert.Id]">{{ advert.Title }} </a>
+            <span mark-as-exclude class="glyphicon glyphicon-ban-circle pull-right" title="Exclude form search"></span>
+        </div>
     </div>
 </div>
 

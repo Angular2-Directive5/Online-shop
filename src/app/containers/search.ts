@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { UserService } from '../services/user.service'
 import { AdvertsService } from '../services/adverts.service'
@@ -34,7 +34,8 @@ export class Search implements OnInit {
                         'pic': 'test'
                     },
                     'AdvertDescription': 'AdvertDescriptionAdvertDescription dssadas dsd asd sf',
-                    'CreatedAt': Date()
+                    'CreatedAt': Date(),
+                    'Category': 'a'
                 },
                 {
                     'Id': 'asdasdas',
@@ -43,7 +44,8 @@ export class Search implements OnInit {
                         'pic': 'test'
                     },
                     'AdvertDescription': 'asafsas dssadas dsd asd sf',
-                    'CreatedAt': Date()
+                    'CreatedAt': Date(),
+                    'Category': 'b'
                 },
                 {
                     'Id': 'asvavsvasv',
@@ -52,12 +54,19 @@ export class Search implements OnInit {
                         'pic': 'test'
                     },
                     'AdvertDescription': 'AAAAAAAAAAAA dssadas dsd asd sf',
-                    'CreatedAt': Date()
+                    'CreatedAt': Date(),
+                    'Category': 'c'
                 }
             ]
         }
+    }
 
-        console.log(this.adverts);
+    onWayChange(event: any) {
+        this.sortingWay = +event.target.value;        
+    }
+
+    onSortingChange(event: any) {
+        this.sortingProperty = event.target.value;        
     }
 
 }
